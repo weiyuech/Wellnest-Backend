@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from backend.predictor import predict_risk  # ✅ updated path
+
+import sys
+sys.path.append("backend")
+from predictor import predict_risk
 
 app = FastAPI(
     title="Pregnancy Risk API",
