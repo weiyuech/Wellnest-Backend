@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+
+# ML Stack
+scikit-learn==1.6.1
+lightgbm
+pandas
+numpy
+
+# Transformers for future use
+transformers==4.31.0
+peft
