@@ -25,5 +25,10 @@ def read_root():
 
 @app.post("/predict")
 def predict(data: InputData):
-    result = predict_risk(data.dict())
-    return {"risk_level": result}
+    print("📡 /predict endpoint was triggered!")
+    try:
+        result = predict_risk(data.dict())
+        return {"risk_level": result}
+    except Exception as e:
+        print(f"❌ Error in /predict: {e}")
+        return {"error": str(e)}
